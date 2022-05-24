@@ -33,14 +33,15 @@ namespace Rex
         }
         public string Run(string line)
         {
-            name = line.Split(' ').First();
+            line = line.Replace("/", "\\");
+            name = Path.GetFullPath(line.Split(' ').First());
             string[] args = line.Split(' ').Skip(1).ToArray();
 
             //lire toutes les lignes du fichier
-            string[] lines = File.ReadAllLines(Config.instance.path + "\\" + name, Encoding.UTF8);
+            string[] lines = File.ReadAllLines(name, Encoding.UTF8);
             lines = DealWithArguments(lines, args);
 
-            while (line != null)
+            while (line != null && running)
             {
                 //lire la ligne numéro n (donné par "flow") du fichier
                 line = Flow(lines);
@@ -88,7 +89,7 @@ namespace Rex
             string temp = "";
             string test;
             //tant que l'index est dans les limites du stack, on continue
-            while (flowindex < list.Length && flowindex > -1 && running)
+            while (flowindex < list.Length && flowindex > -1)
             {
                 //on prend la commande d'index i
                 temp = list[flowindex].Replace("\t", "");

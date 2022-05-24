@@ -14,15 +14,19 @@ namespace RexClicker
             new Thread(new ThreadStart(Mouse.Hook)).Start();
             new Thread(new ThreadStart(Keyboard.Hook)).Start();
 
-            try
+            if (args.Length >= 1)
             {
-                if (args.Length >= 1) Rex.Script.ResolveLine(args.Join(" "));
-            }
-            catch (Exception e)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(e.Message);
-                Console.ReadKey();
+                try
+                {
+                    new Rex.Script().Run(string.Join(" ", args));
+                }
+                catch (Exception e)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(e.Message);
+                    Console.ReadKey();
+                }
+                Environment.Exit(0);
             }
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.Title = "Rex Clicker";
