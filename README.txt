@@ -1,4 +1,3 @@
-# rexClick
 Rex click lets you create scripts for automating some tasks related to mouse and keyboard.
 
 It is a console application, meaning there is no graphic user interface. 
