@@ -48,6 +48,7 @@
     <Compile Include="Commands\Application\App.cs" />
     <Compile Include="Commands\Application\Exit.cs" />
     <Compile Include="Commands\Application\Help.cs" />
+    <Compile Include="Commands\Application\Time.cs" />
     <Compile Include="Commands\Clipboard\Clip.cs" />
     <Compile Include="Commands\Clipboard\Get.cs" />
     <Compile Include="Commands\Clipboard\Help.cs" />

@@ -1,0 +1,4 @@
+:start
+console print (app time)
+app wait 1000
+!start

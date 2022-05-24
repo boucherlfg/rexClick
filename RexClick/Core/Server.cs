@@ -17,10 +17,17 @@ namespace Rex.Core
             ipAddress = "127.0.0.1";
             port = 5000;
             path = Directory.GetParent(System.Reflection.Assembly.GetExecutingAssembly().Location).FullName;
+            time = DateTime.Now;
         }
         public string ipAddress;
         public int port;
         public string path;
+        public DateTime time;
+
+        public void Init()
+        {
+            //empty. Only there to force singleton instantiation
+        }
     }
     public class Server
     {

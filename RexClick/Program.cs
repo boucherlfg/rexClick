@@ -13,6 +13,7 @@ namespace RexClicker
             Console.Title = "REX CLICK";
             new Thread(new ThreadStart(Mouse.Hook)).Start();
             new Thread(new ThreadStart(Keyboard.Hook)).Start();
+            Config.instance.Init();
 
             if (args.Length >= 1)
             {

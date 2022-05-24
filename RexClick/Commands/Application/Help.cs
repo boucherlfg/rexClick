@@ -13,8 +13,9 @@ namespace Rex.Commands.Application
         public override string Do(string line)
         {
             return @"- wait <time in ms>: waits a certain time
+- time <ms> : gives you time since the app has been started in milliseconds
 - run <filename> <arguments> : lets you use a script instead of typing the commands
-- exe <filename> <arguments>: lets you run an external executable.
+- exe <filename> <arguments>: lets you run an external executable
 - exit : closes the application";
         }
     }
