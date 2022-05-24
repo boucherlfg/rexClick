@@ -8,7 +8,7 @@ I added a notepad++ style template to the repo, if you want to use it.
 
 I also added a batch file for setting associations for rex click with .rex files.
 
-You can juste type "help" in the command line at any stage, and you will get information about available commands.
+You can type "help" in the command line at almost any stage, and you will get information about available commands.
 
 The two only unhelped contents in the app are the maths module and the flow control (in scripts) so here are the possible operations : 
 
