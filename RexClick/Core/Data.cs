@@ -8,7 +8,6 @@ namespace Rex.Core
 {
     public class Data
     {
-        public bool listening;
         private static Data instance;
         public static Data Instance => instance == null ? (instance = new Data()) : instance;
         private Data()

@@ -14,6 +14,6 @@ namespace Rex.Commands.Network
             new Info(), new Down(), new IP(), 
             new Listen(), new Listening(), new LocalIP(),
             new Ping(), new Port(), new Scan(), 
-            new Send(), new Up()) { }
+            new Send(), new Up(), new Help()) { }
     }
 }

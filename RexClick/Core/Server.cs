@@ -23,6 +23,7 @@ namespace Rex.Core
         public int port;
         public string path;
         public DateTime time;
+        public bool listening;
 
         public void Init()
         {
@@ -33,16 +34,15 @@ namespace Rex.Core
     {
         public static Server instance = new Server();
         private Thread thread;
-        private bool listening;
-        public bool Running => listening;
+        public bool Running => Config.instance.listening;
 
         public void StartListen()
         {
             thread = new Thread(new ThreadStart(() => Listen()));
             thread.Start();
-            listening = true;
+            Config.instance.listening = true;
         }
-        public void StopListen() => listening = false;
+        public void StopListen() => Config.instance.listening = false;
         private void Listen()
         {
             //---listen at the specified IP and port no.---
@@ -52,7 +52,7 @@ namespace Rex.Core
             int bytesRead;
             string dataReceived;
 
-            while (listening)
+            while (Config.instance.listening)
             {
                 listener.Start();
 

@@ -8,7 +8,7 @@ namespace Rex.Commands.Network
 
         public override string Do(string line)
         {
-            return Data.Instance.listening.ToInt().ToString();
+            return Config.instance.listening.ToInt().ToString();
         }
     }
 }

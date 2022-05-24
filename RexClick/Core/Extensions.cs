@@ -90,14 +90,7 @@ namespace Rex.Core
         /// <returns></returns>
         public static bool ToBool(this string a)
         {
-            try
-            {
-                return double.Parse(a).ToBool();
-            }
-            catch
-            {
-                return bool.Parse(a);
-            }
+            return a != "0";
         }
         /// <summary>
         /// splits and delete null elements
