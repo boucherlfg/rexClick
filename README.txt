@@ -14,26 +14,42 @@ The two only unhelped contents in the app are the maths module and the flow cont
 
 MATHS
 
-* + a b : adds two numbers
-* - a b : subtracts two numbers
-* * a b : multiplies two numbers
-* / a b : divides two numbers
-* ^ a b : yields the power two numbers
++ a b : adds two numbers
+- a b : subtracts two numbers
+* a b : multiplies two numbers
+/ a b : divides two numbers
+^ a b : yields the power two numbers
 
-* = a b : checks if two numbers are equal
-* != a b : checks if two numbers are not equal
-* < a b : checks if a is strictly less than b
-* > a b : checks if a is strictly more than b
-* <= a b : checks if a is less or equal to b
-* >= a b : checks if a is more or equal to b
+= a b : checks if two numbers are equal
+!= a b : checks if two numbers are not equal
+< a b : checks if a is strictly less than b
+> a b : checks if a is strictly more than b
+<= a b : checks if a is less or equal to b
+>= a b : checks if a is more or equal to b
  
-* rand : yields a random decimal from 0 to 1
-* _ num : floors the given number
-* ~ num : returns 1 if number is 0, 1 otherwise
+rand : yields a random decimal from 0 to 1
+_ num : floors the given number
+~ num : returns 1 if number is 0, 1 otherwise
   
 FLOW
 
-* !flag : tells the script to go to corresponding flag
-* :flag : indicates a flag. script will pass this instruction
-* /comment : indicates a comment. script will pass this instruction
-* ?(expression)!flag : indicates a conditional jump. it will go to given flag only if expression evaluates to anything but 0
+!flag : tells the script to go to corresponding flag
+:flag : indicates a flag. script will pass this instruction
+/comment : indicates a comment. script will pass this instruction
+?(expression)!flag : indicates a conditional jump. it will go to given flag only if expression evaluates to anything but 0
+%n : you can pass arguments to scripts via console. Those arguments will be represented in scripts as %0, %1, %2...
+
+To start a script, you need to either : 
+1. use the console, and type "app run filename.txt".
+2. drag and drop the script on the .exe file
+3. double click it (if it's a .rex file, and you have used the association batch file)
+
+example : 
+
+var set a 0
+:start
+console print (var get a)
+var set a (+ (var get a) 1)
+!start
+
+This will print numbers from 0, incrementing 1 each time, up to when you stop the script.
