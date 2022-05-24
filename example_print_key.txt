@@ -1,0 +1,3 @@
+:start
+console print (key last)
+!start

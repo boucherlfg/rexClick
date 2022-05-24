@@ -1,0 +1,7 @@
+:start
+?(= (key last) F6)!press
+!start
+
+:press
+key stroke hello keyboard
+!start

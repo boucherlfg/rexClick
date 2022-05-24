@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\Application\App.cs" />
+    <Compile Include="Commands\Application\Eval.cs" />
     <Compile Include="Commands\Application\Exit.cs" />
     <Compile Include="Commands\Application\Help.cs" />
     <Compile Include="Commands\Application\Time.cs" />
@@ -53,6 +54,8 @@
     <Compile Include="Commands\Clipboard\Get.cs" />
     <Compile Include="Commands\Clipboard\Help.cs" />
     <Compile Include="Commands\Clipboard\Set.cs" />
+    <Compile Include="Commands\Console\Back.cs" />
+    <Compile Include="Commands\Console\Fore.cs" />
     <Compile Include="Commands\Files\Add.cs" />
     <Compile Include="Commands\Files\Clear.cs" />
     <Compile Include="Commands\Files\Del.cs" />
@@ -71,7 +74,7 @@
     <Compile Include="Commands\Command.cs" />
     <Compile Include="Commands\Application\Exe.cs" />
     <Compile Include="Commands\Console\Print.cs" />
-    <Compile Include="Commands\Console\Console.cs" />
+    <Compile Include="Commands\Console\ConsoleCommand.cs" />
     <Compile Include="Commands\Application\Run.cs" />
     <Compile Include="Commands\Application\Wait.cs" />
     <Compile Include="Commands\Keyboard\Last.cs" />
@@ -90,6 +93,7 @@
     <Compile Include="Commands\Math\Mult.cs" />
     <Compile Include="Commands\Math\Neq.cs" />
     <Compile Include="Commands\Math\Not.cs" />
+    <Compile Include="Commands\Console\Pos.cs" />
     <Compile Include="Commands\Math\Pow.cs" />
     <Compile Include="Commands\Math\Rand.cs" />
     <Compile Include="Commands\Math\Sub.cs" />

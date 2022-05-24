@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rex.Commands.Console
+namespace Rex.Commands.Application
 {
-    public class Clear : Command
+    public class Eval : Command
     {
-        public override string Key => "clear";
+        public override string Key => "eval";
 
         public override string Do(string line)
         {
-            System.Console.Clear();
-            return "";
+            return Script.ResolveLine(line);
         }
     }
 }

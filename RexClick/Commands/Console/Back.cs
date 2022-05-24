@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Rex.Commands.Console
 {
-    public class Clear : Command
+    public class Back : Command
     {
-        public override string Key => "clear";
+        public override string Key => "back";
 
         public override string Do(string line)
         {
-            System.Console.Clear();
+            var color = Enum.GetValues(typeof(ConsoleColor)).OfType<ConsoleColor>().FirstOrDefault(x => x.ToString() == line);
+            System.Console.BackgroundColor = color;
             return "";
         }
     }

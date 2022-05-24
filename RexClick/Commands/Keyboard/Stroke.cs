@@ -8,8 +8,7 @@ namespace Rex.Commands.Keyboard
 
         public override string Do(string line)
         {
-            foreach (char mes in line)
-                SendKeys.SendWait(mes.ToString());
+            SendKeys.SendWait(line.ToString());
             return "";
         }
     }

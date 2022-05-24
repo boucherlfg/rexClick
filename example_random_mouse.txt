@@ -1,0 +1,9 @@
+var set resX (screen resolution x)
+var set resY (screen resolution y)
+
+:start
+var set randX (_ (* (rand) (screen resolution x)))
+var set randY (_ (* (rand) (screen resolution y)))
+mouse set (var get randX) (var get randY)
+app wait 100
+!start

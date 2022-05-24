@@ -52,6 +52,7 @@ namespace Rex
                 line = ResolveLine(line);
                 //on retourne ce que la commande nous a dit en out.
             }
+            
             return "";
         }
 

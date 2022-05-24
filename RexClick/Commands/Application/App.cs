@@ -9,6 +9,6 @@ namespace Rex.Commands.Application
     public class App : CompositeCommand
     {
         public override string Key => "app";
-        public App() : base(new Exe(), new Exit(), new Run(), new Wait(), new Help(), new Time()) { }
+        public App() : base(new Exe(), new Exit(), new Run(), new Wait(), new Help(), new Time(), new Eval()) { }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rex.Commands.Consoles
+namespace Rex.Commands.Console
 {
     public class Print : Command
     {

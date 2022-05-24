@@ -10,6 +10,7 @@ namespace RexClicker
         [STAThread]
         static void Main(string[] args)
         {
+            Console.CursorVisible = false;
             Console.Title = "REX CLICK";
             new Thread(new ThreadStart(Mouse.Hook)).Start();
             new Thread(new ThreadStart(Keyboard.Hook)).Start();
@@ -37,17 +38,18 @@ namespace RexClicker
             {
                 try
                 {
-                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.CursorVisible = true;
                     Console.Write(" > ");
-                    Console.ForegroundColor = ConsoleColor.White;
                     string line = Console.ReadLine();
-                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.CursorVisible = false;
                     Rex.Script.ResolveLine(line).Message();
                 }
                 catch (Exception e)
                 {
+                    var last = Console.ForegroundColor;
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine(e.Message);
+                    Console.ForegroundColor = last;
                 }
             }
         }

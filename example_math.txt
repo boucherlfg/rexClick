@@ -1,0 +1,13 @@
+console print + 6 3 is (+ 6 3)
+console print - 6 3 is (- 6 3)
+console print * 6 3 is (* 6 3)
+console print / 6 3 is (/ 6 3)
+console print ^ 6 3 is (^ 6 3)
+console print _ 2.5 is (_ 2.5)
+console print ~ 0 is (~ 0) and ~ 1 is (~ 1)
+console print = 3 2 is (= 3 2) and = 3 3 is (= 3 3)
+console print != 3 2 is (!= 3 2) and != 3 3 is (!= 3 3)
+console print <= 3 2 is (<= 3 2) and >= 3 2 is (>= 3 2)
+console print < 3 2 is (< 3 2) and > 3 2 is (> 3 2)
+console print rand is (rand)
+console ask
